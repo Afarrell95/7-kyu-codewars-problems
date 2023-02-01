@@ -11,8 +11,12 @@
 // (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
 // Your function should only return a number, not the explanation about how you get that number.
 
-function GetSum(a, b) {
-  if (a == b) return a;
-  else if (a < b) return a + GetSum(a + 1, b);
-  else return a + GetSum(a - 1, b);
+function getSum(a, b) {
+  if (a == b) {
+    return a;
+  } else if (a < b) {
+    return a + getSum(a + 1, b);
+  } else {
+    return a + getSum(a - 1, b);
+  }
 }
